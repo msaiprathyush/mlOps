@@ -5,17 +5,17 @@ from pathlib import Path
 list_of_files = [
     ".github/workflows/.gitkeep",
     "src/__init__.py",
-    "src/components/__init__.py"
-    "src/components/data_ingestion.py"
-    "src/components/data_transformation.py"
-    "src/components/model_trainer.py"
-    "src/components/model_evaluation.py"
-    "src/pipeline/__init__.py"
-    "src/pipeline/traning_pipeline.py"
-    "src/pipeline/predication_pipeline.py"
-    "src/utils/utils.py"
-    "src/logger/logging.py"
-    "src/exception/exception"
+    "src/components/__init__.py",
+    "src/components/data_ingestion.py",
+    "src/components/data_transformation.py",
+    "src/components/model_trainer.py",
+    "src/components/model_evaluation.py",
+    "src/pipeline/__init__.py",
+    "src/pipeline/traning_pipeline.py",
+    "src/pipeline/predication_pipeline.py",
+    "src/utils/utils.py",
+    "src/logger/logging.py",
+    "src/exception/exception.py",
     #f"src/{package_name}/__init__.py", 
     #f"src/{package_name}/mongo_crud.py", 
     "tests/__init__.py",
@@ -39,6 +39,6 @@ for filepath in list_of_files:
         #logging.info(f"Creating directory: {filedir} for file: {filename}")
 
     if (not os.path.exists(filepath)) or (os.path.getsize(filepath) == 0):
-        #`logging.info(f"File Exists at: {filepath}")
+        #logging.info(f"File Exists at: {filepath}")
         with open(filepath, "w") as f:
             pass # create an empty file
